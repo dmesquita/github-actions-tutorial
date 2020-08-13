@@ -1,4 +1,4 @@
-name: Use a custom Action                                               
+name: Action from the same repo                                    
 on: push                                                  
 jobs:        
   use-your-own-action:
