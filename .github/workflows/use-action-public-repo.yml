@@ -1,0 +1,10 @@
+name: Action from a public repository                                             
+on: push                                                  
+jobs:        
+  use-your-own-action:
+    name: Say Hi
+    runs-on: ubuntu-latest
+    steps:
+      - uses: dmesquita/github-actions-tutorial@master
+        with:
+         user: 'Déborah'
