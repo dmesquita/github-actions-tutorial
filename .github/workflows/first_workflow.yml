@@ -1,0 +1,46 @@
+
+name: First Workflow                                               
+on: push                                                  
+jobs:                         
+  first-job:                           
+    name: Say hi                           
+    runs-on: ubuntu-latest                           
+    steps:                           
+      - name: Print a greeting                             
+        run: echo Hi from our first workflow!  
+                                                     
+      - name: Show ASCII greeting                             
+        uses: mscoutermarsh/ascii-art-action@master    
+        with:                               
+          text: 'HELLO!'                                                           
+  get-posts-job:                            
+    name: Get TDS posts                            
+    runs-on: ubuntu-latest     
+    steps:                             
+      - name: Check-out the repo under $GITHUB_WORKSPACE                               
+        uses: actions/checkout@v2         
+                                                  
+      - name: Set up Python 3.8                               
+        uses: actions/setup-python@v2                               
+        with:                                 
+          python-version: '3.8'          
+                                                  
+      - name: Install Scrapy                               
+        run: pip install scrapy         
+ 
+      - name: Get TDS posts about GitHub Actions                                 
+        run: scrapy runspider posts_spider.py -o posts.json
+        
+      - name: Upload posts
+        uses: actions/upload-artifact@v2
+        with:
+          name: posts
+          path: posts.json
+          
+  use-our-own-action:
+    name: Say Hi using your own action
+    runs-on: ubuntu-latest
+    steps:
+      - uses: dmesquita/github-actions-tutorial@v1
+        with:
+         user: 'Déborah'
