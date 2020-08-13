@@ -7,7 +7,7 @@ Actions are **individual tasks** and workflows are **custom automated processes*
 * GitHub Actions: individual tasks; they can be written using Docker, JavaScript and now also shell scrips with the new Composite Run Steps; you can write your own actions or use an action someone else created
 
 ## Writing your first workflow
-Workflows are defined using `YAML` files and you must store them in the `.github/workflows` directory of your repository
+Workflows are defined using `YAML` files and you must store them in the `.github/workflows` directory of your repository.
 To create a workflow we need to define these things:
 * **The event** that triggers the workflow
 * **The machine** each job should run
