@@ -2,10 +2,12 @@
 name: Use a custom Action                                               
 on: push                                                  
 jobs:        
-  use-our-own-action:
+  use-your-own-action:
     name: Say Hi using your own action
     runs-on: ubuntu-latest
     steps:
+      - uses: actions/checkout@v2
+        
       - uses: dmesquita/github-actions-tutorial@v1
         with:
          user: 'Déborah'
