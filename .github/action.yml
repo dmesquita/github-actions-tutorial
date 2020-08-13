@@ -1,0 +1,12 @@
+name: 'Hey From a GitHub Action'
+description: 'Greet someone'
+inputs:
+  user:  # id of input
+    description: 'Who to greet'
+    required: true
+    default: 'You'
+runs:
+  using: "composite"
+  steps: 
+    - run: echo Hey ${{ inputs.user }}.
+      shell: bash
