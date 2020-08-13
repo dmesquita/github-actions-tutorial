@@ -8,6 +8,6 @@ jobs:
     steps:
       - uses: actions/checkout@v2
         
-      - uses: dmesquita/github-actions-tutorial@v1
+      - uses: dmesquita/github-actions-tutorial@v1-beta
         with:
          user: 'Déborah'
