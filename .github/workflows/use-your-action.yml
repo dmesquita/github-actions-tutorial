@@ -7,6 +7,6 @@ jobs:
     steps:
       - uses: actions/checkout@v2
         
-      - uses: dmesquita/github-actions-tutorial@master
+      - uses: ./action
         with:
          user: 'Déborah'
