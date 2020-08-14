@@ -1,4 +1,5 @@
 # Introduction to GitHub Actions
+*You can read the full tutorial here: https://towardsdatascience.com/introduction-to-github-actions-7fcb30d0f959*
 ## Actions vs. Workflows
 Actions are **individual tasks** and workflows are **custom automated processes**
 
